@@ -214,6 +214,7 @@
 }
 
 #footer {
+  box-sizing: border-box;
   background-color: #e5e5e5;
   border: 1px solid black;
   width: 100%;
@@ -224,4 +225,12 @@
 .pigClass {
   width: 60px;
   margin-top: 10px;
+}
+
+#rightSquare {
+  width: 20%;
+  height: 30px;
+  background-color: #818181;
+  margin-top: 33px;
+  border: 0px;
 }
