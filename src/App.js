@@ -8,9 +8,8 @@ function App() {
   const [weight, setWeight] = useState();
   const [bmiStatus, setBmiStatus] = useState('');
   const [moreOrLess, setMoreOrLess] = useState('늘려야 / 빼야');
+  const [moreOrLess2, setMoreOrLess2] = useState('+/-');
   const [pigBox, setPigBox] = useState();
-  const [leftPigBox, setLeftPigBox] = useState(0);
-  const [rightPigBox, setRightPigBox] = useState(0);
   const [moreValue, setMoreValue] = useState(0);
 
   const originalHeight = useRef(0);
@@ -129,10 +128,12 @@ function App() {
       if (pigBox < originalPigBox.current) {
         const newMoreValue = Math.ceil((originalBMIValue.current - minOrMaxValue[pigBox - 1].max) * originalHeight.current * originalHeight.current / 10000);
         setMoreOrLess('빼야');
+        setMoreOrLess2('-');
         setMoreValue(newMoreValue);
       } else if (pigBox > originalPigBox.current) {
         const newMoreValue = Math.ceil((minOrMaxValue[pigBox - 1].min - originalBMIValue.current) * originalHeight.current * originalHeight.current / 10000);
         setMoreOrLess('늘려야');
+        setMoreOrLess2('+');
         setMoreValue(newMoreValue);
       } else {
         setMoreValue(0);
@@ -147,7 +148,8 @@ function App() {
           <h1 id="headerTitle"> BMI 변화 계산기 </h1>
         </div>
         <div id="websiteDescription">
-          <p> 어서 오세요! 키가 지금과 똑같을 때 몇 kg까지 빼야/늘려야 BMI 전/다음 단계로 넘어갈 수 있을까 계산해주는 웹사이트입니다.</p>
+          <p id="webDescription"> 어서 오세요! </p>
+          <p id="webDescription2"> 키가 지금과 똑같을 때 몇 kg까지 빼야/늘려야 BMI 전/다음 단계로 넘어갈 수 있을까 계산해주는 웹사이트입니다.</p>
         </div>
         <div id="inputForms">
           <input id="heightR" className="inputFormsClass" type="number" placeholder="키 (cm)" onChange={(h) => setHeight(h.target.value)} />
@@ -230,6 +232,7 @@ function App() {
           </button>
           <div id="centerBox">
             <p id="centerBoxP"> 해당 단계가 되려면 최소 {moreValue}kg를 더 {moreOrLess} 합니다. </p>
+            <p id="centerBoxPSmall"> {moreOrLess2}{moreValue}kg </p>
           </div>
           <button id="rightSquare" onClick={rightClicked}>
           </button>

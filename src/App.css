@@ -42,6 +42,7 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  flex: 1;
 }
 
 #header {
@@ -210,16 +211,15 @@
 }
 
 #who {
-  margin-top: 83px;
+  margin-top: 40px;
 }
 
 #footer {
   box-sizing: border-box;
   background-color: #e5e5e5;
+  text-align: center;
   border: 1px solid black;
   width: 100%;
-  position:absolute;
-  bottom:0px;
 }
 
 .pigClass {
@@ -233,4 +233,123 @@
   background-color: #818181;
   margin-top: 33px;
   border: 0px;
+}
+
+#centerBoxPSmall {
+  display: none;
+}
+
+@media (max-width:897px) {
+
+  #directionButtons {
+    margin-top: 20px;
+  }
+
+  #leftTriangle {
+    border-right: 30px solid #818181;
+    border-left: 30px solid #ffd7ef;
+    border-top: 30px solid #ffd7ef;
+    border-bottom: 30px solid #ffd7ef;
+  }
+  
+  #leftSquare {
+    width: 50%;
+    height: 40px;
+    background-color: #818181;
+    margin-top: 10px;
+    border: 0px;
+  }
+
+  #rightTriangle {
+    border-right: 30px solid #ffd7ef;
+    border-left: 30px solid #818181;
+    border-top: 30px solid #ffd7ef;
+    border-bottom: 30px solid #ffd7ef;
+  }
+  
+  #rightSquare {
+    width: 50%;
+    height: 40px;
+    background-color: #818181;
+    margin-top: 10px;
+    border: 0px;
+  }
+
+  #webDescription,
+  #webDescription2 {
+    display:none;
+  }
+
+  #centerBox {
+    background-color: #e5e5e5;
+    border: 1px solid black;
+    margin-left: 35px;
+    width: 80%;
+    margin-right: 35px;
+    height: 70px;
+  }
+
+  #centerBoxP {
+    display: none;
+  }
+
+  #centerBoxPSmall {
+    display: block;
+    margin-top:20px;
+  }
+
+  #who {
+    margin-top: 20px;
+  }
+
+  .colorBoxP {
+    font-size:14px;
+  }
+
+  #colorBox {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  #colorBox1 {
+    width: 24.5%;
+    height: 150px;
+  }
+  
+  #colorBox2 {
+    width: 24.5%;
+    height: 150px;
+  }
+  
+  #colorBox3 {
+    width: 24.5%;
+    height: 150px;
+  }
+  
+  #colorBox4 {
+    width: 24.5%;
+    height: 150px;
+  }
+  
+  #colorBox5 {
+    width: 24.5%;
+    height: 150px;
+  }
+  
+  #colorBox6 {
+    width: 24.5%;
+    height: 150px;
+  }
+  
+  #colorBox7 {
+    width: 24.5%;
+    height: 50px;
+  }
+  
+  #colorBox8 {
+    width: 24.5%;
+    height: 50px;
+  }
+  
 }
