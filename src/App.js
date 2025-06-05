@@ -60,17 +60,10 @@ function App() {
     }
   ]
 
-  function consoleFunction() {
-    console.log(height);
-    console.log(weight);
-  }
-  consoleFunction();
-
   useEffect(() => {
     if (height != undefined && weight != undefined) {
       var statusF = document.getElementById('status');
       var bmiValue = weight / ((height / 100) * (height / 100));
-      console.log(bmiValue);
       if (bmiValue < 16) {
         setBmiStatus('심한 마름');
         setPigBox(1);
