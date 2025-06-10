@@ -211,7 +211,7 @@ function App() {
           </div>
           <div id="colorBox8">
             <div>
-              <p className="colorBoxP"> 아주 심한 비만 </p>
+              <p className="colorBoxP"> 최고 비만 </p>
             </div>
             <div className="colorBoxUnder" id="colorBox8Under">
               {pigBox === 8 && <img src="../pig.png" alt="돼지" className="pigClass" />}
